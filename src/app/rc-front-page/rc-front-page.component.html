@@ -1,10 +1,70 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <label>
-    Name:
-    <input type="text" [formControl]="name">
-  </label>
-  <label>
-    Place:
-    <input type="text" [formControl]="place">
-  </label>
-</form>
+<div class="container">
+  <br>
+    <h2>Rc Cricket front page</h2>
+  <br>
+    <!--<form [formGroup]="eventForm" autocomplete="off" novalidate (ngSubmit)="createEvent(eventForm.value)">-->
+    <form>
+      <div class="form-group row">
+          <label for="inputEventId" class="col-2 col-form-label" >Event Id</label>
+          <div class="col-10">
+              <input formControlName="eventId" class="form-control" type="text" placeholder="event Id" id="inputEventId">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputMainTopic" class="col-2 col-form-label" >Main Topic</label>
+          <div class="col-10">
+              <input formControlName="mainTopic" class="form-control" type="text" placeholder="main topic" id="inputMainTopic" row="2">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputSubTopic" class="col-2 col-form-label">Sub Topic</label>
+          <div class="col-10">
+              <input formControlName="subTopic" class="form-control" type="text" placeholder="sub topic" id="inputSubTopic">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+          <div class="col-sm-10">
+              <input formControlName="date" type="date" class="form-control" id="inputDate" >
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputTime" class="col-sm-2 col-form-label">Time</label>
+          <div class="col-sm-10">
+              <input formControlName="time" type="time" class="form-control" id="inputTime">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputPlace" class="col-sm-2 col-form-label">Place</label>
+          <div class="col-sm-10">
+              <input formControlName="place" type="text" class="form-control" id="inputPlace" placeholder="place">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputContent1" class="col-2 col-form-label">Content1</label>
+          <div class="col-10">
+              <input formControlName="content1" class="form-control" type="textarea" value="" id="inputContent1" placeholder="Content1">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="inputContent2" class="col-2 col-form-label">Content2</label>
+          <div class="col-10">
+            <input formControlName="content2" class="form-control" type="textarea" value="" id="inputContent2" placeholder="Content2">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            <input id="s-btn" class="btn btn-primary" type="submit" value="Submit">  
+          </div>
+      </div>
+
+    </form>
+</div>
